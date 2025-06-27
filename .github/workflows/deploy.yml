@@ -18,8 +18,8 @@ jobs:
       - name: Start MinIO
         run: |
           docker run -d -p 9000:9000 -p 9001:9001 \
-            -e MINIO_ROOT_USER=minioadmin \
-            -e MINIO_ROOT_PASSWORD=minioadmin \
+            -e MINIO_ROOT_USER=${{ secrets.MINIO_ADMIN }} \
+            -e MINIO_ROOT_PASSWORD=${{ secrets.MINIO_PASSWD }} \
             --name minio \
             minio/minio server /data --console-address ":9001"
           sleep 10
