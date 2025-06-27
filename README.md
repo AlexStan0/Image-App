@@ -58,7 +58,7 @@ docker run -p 9000:9000 -p 9001:9001 \
   -e MINIO_ROOT_PASSWORD=<custom_pass> \
   minio/minio server /data --console-address ":9001"
 ```
-- Access MinIO Console at [http://localhost:9001](http://localhost:9001).
+- Access MinIO Console at [http://localhost:9001](http://localhost:9001) to create a the `images` bucket. 
 
 ### 3. Start the Python Caption Server
 
@@ -89,7 +89,7 @@ Visit [http://localhost:3000](http://localhost:3000) to use the app.
 
 ## Configuration
 
-- **Environment variables** are used for MinIO and database credentials. See `.env.example` for reference.
+- **Environment variables** are used for MinIO and database credentials.
 - **Prisma** uses SQLite by default. To use PostgreSQL or MySQL, update `prisma/schema.prisma` and your `.env`.
 
 ---
