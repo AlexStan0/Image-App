@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
 
     const pyRes = await fetch(LOCAL_PYTHON_API_URL, {
       method: 'POST',
-      body: formData as any,
+      body: formData as unknown as BodyInit,
     });
 
     if (!pyRes.ok) {

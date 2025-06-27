@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const SearchPage: React.FC = () => {
     const [search, setSearch] = useState('');
@@ -30,11 +31,13 @@ const SearchPage: React.FC = () => {
                     <div className="flex flex-col items-center w-full">
                         <div className="flex justify-center">
                             <div className="bg-gray-800 rounded-xl shadow-[0_0_32px_4px_rgba(34,211,238,0.15)] p-6 flex flex-col items-center">
-                                <img
+                                <Image
                                     src={searchResults[0].url}
                                     alt={searchResults[0].caption}
+                                    width={512}
+                                    height={512}
                                     className="w-[32rem] h-[32rem] object-contain rounded-lg mb-4"
-                                />
+                                    />
                                 <span className="text-gray-100 text-center text-lg">{searchResults[0].caption}</span>
                             </div>
                         </div>

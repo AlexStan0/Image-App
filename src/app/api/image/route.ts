@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
     const obj = await s3.send(
       new GetObjectCommand({ Bucket: MINIO_BUCKET, Key: key })
     );
-    // @ts-ignore
+    // @ts-expect-ignore
     const stream = obj.Body as ReadableStream;
     const contentType = obj.ContentType || 'application/octet-stream';
     return new Response(stream, { headers: { 'Content-Type': contentType } });
