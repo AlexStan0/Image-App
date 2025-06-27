@@ -29,7 +29,7 @@ export async function GET(req: NextRequest) {
     const stream = obj.Body as ReadableStream;
     const contentType = obj.ContentType || 'application/octet-stream';
     return new Response(stream, { headers: { 'Content-Type': contentType } });
-  } catch (err) {
+  } catch {
     return new Response('Not found', { status: 404 });
   }
 }

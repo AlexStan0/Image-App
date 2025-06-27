@@ -64,8 +64,7 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ label });
-  } catch (err) {
-    console.error('API /api/label error:', err);
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }
@@ -91,8 +90,7 @@ export async function GET(req: NextRequest) {
     }));
 
     return NextResponse.json({ results });
-  } catch (err) {
-    console.error('API /api/label GET error:', err);
+  } catch  {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }
