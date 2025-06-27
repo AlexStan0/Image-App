@@ -138,4 +138,4 @@ MIT
 
 # Contributing
 
-See [CONTRIB.README.md](./CONTRIB.README.md) for guidelines.
+See [CONTRIB.READ.md](CONTRIB.READ.md) for guidelines.
