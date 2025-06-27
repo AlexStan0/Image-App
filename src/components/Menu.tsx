@@ -6,6 +6,7 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ active }) => (
+
     <nav className="w-full flex justify-center bg-gray-800 py-4 shadow-md">
         <Link href="/caption" passHref>
             <button
@@ -13,8 +14,7 @@ const Menu: React.FC<MenuProps> = ({ active }) => (
                     active === 'caption'
                         ? 'bg-cyan-400 text-gray-900 shadow'
                         : 'bg-gray-700 text-gray-200 hover:bg-cyan-700'
-                }`}
-            >
+            }`}>
                 Caption Image
             </button>
         </Link>
@@ -24,8 +24,7 @@ const Menu: React.FC<MenuProps> = ({ active }) => (
                     active === 'search'
                         ? 'bg-cyan-400 text-gray-900 shadow'
                         : 'bg-gray-700 text-gray-200 hover:bg-cyan-700'
-                }`}
-            >
+                }`}>
                 Search by Caption
             </button>
         </Link>

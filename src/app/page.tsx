@@ -5,6 +5,7 @@ import CaptionPage from '@/components/Caption';
 import SearchPage from '@/components/Search';
 
 export default function Home() {
+  
   const [active, setActive] = useState<'caption' | 'search'>('caption');
 
   return (

@@ -19,7 +19,9 @@ const s3 = new S3Client({
 });
 
 export async function POST(req: NextRequest) {
+
   try {
+
     const { image } = await req.json();
 
     // Decode base64 image
@@ -70,7 +72,9 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET(req: NextRequest) {
+
   try {
+
     const { searchParams } = new URL(req.url);
     const captionQuery = searchParams.get('caption')?.toLowerCase() || '';
 

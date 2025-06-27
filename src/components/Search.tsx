@@ -4,19 +4,24 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const SearchPage: React.FC = () => {
+
     const [search, setSearch] = useState('');
     const [searchResults, setSearchResults] = useState<{ url: string; caption: string }[]>([]);
     const [searchLoading, setSearchLoading] = useState(false);
 
     const handleSearch = async (e: React.FormEvent) => {
+
         e.preventDefault();
         setSearchLoading(true);
         setSearchResults([]);
+
         try {
+
             const res = await fetch(`/api/label?caption=${encodeURIComponent(search)}`);
             if (!res.ok) throw new Error('API error');
             const data = await res.json();
             setSearchResults(data.results || []);
+
         } catch {
             setSearchResults([]);
         } finally {
